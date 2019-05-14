@@ -175,7 +175,7 @@ pipelines:
             - echo "executing..."
         triggeredBy:
           steps:
-            - step2
+            - step2_1
       - name: step2_3
         type: bash
         configuration:
