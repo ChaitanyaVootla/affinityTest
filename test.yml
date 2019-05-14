@@ -202,6 +202,8 @@ pipelines:
             - step2_1
       - name: step2_3
         type: bash
+        configuration:
+          affinityGroup: test3
         setup:
           environmentVariables:
             normal:
@@ -229,6 +231,8 @@ pipelines:
             - step2_2
       - name: step2_4
         type: bash
+        configuration:
+          affinityGroup: test2
         setup:
           runtime:
             type: image
