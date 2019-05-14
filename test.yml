@@ -8,17 +8,21 @@ pipelines:
         configuration:
           affinityGroup: test_group
         setup:
+          environmentVariables:
+            normal:
+              foo: bar
+              boo: $foo
+              shoo: foo boo
+              moo: '"abc def"'
+              zoo: '"\$a$foo"'
+              koo: \(\)\$\\\!\@#%^*
+              IMAGE_TAG: v7.2.4
           runtime:
             type: image
             image:
-              auto:
-                language: java
-                versions:
-                  - 1
-            custom:
-              name: test
-              tag:  test
-              options: test
+              custom:
+                name: drydock/c7
+                tag: $IMAGE_TAG
         requires:
           integrations:
             - docker_chaitanya
@@ -30,17 +34,21 @@ pipelines:
         configuration:
           affinityGroup: test_group
         setup:
+          environmentVariables:
+            normal:
+              foo: bar
+              boo: $foo
+              shoo: foo boo
+              moo: '"abc def"'
+              zoo: '"\$a$foo"'
+              koo: \(\)\$\\\!\@#%^*
+              IMAGE_TAG: v7.2.4
           runtime:
             type: image
             image:
-              auto:
-                language: java
-                versions:
-                  - 1
-            custom:
-              name: test
-              tag:  test
-              options: test
+              custom:
+                name: drydock/c7
+                tag: $IMAGE_TAG
         requires:
           integrations:
             - docker_chaitanya
@@ -55,17 +63,21 @@ pipelines:
         configuration:
           affinityGroup: group2
         setup:
+          environmentVariables:
+            normal:
+              foo: bar
+              boo: $foo
+              shoo: foo boo
+              moo: '"abc def"'
+              zoo: '"\$a$foo"'
+              koo: \(\)\$\\\!\@#%^*
+              IMAGE_TAG: v7.2.4
           runtime:
             type: image
             image:
-              auto:
-                language: java
-                versions:
-                  - 1
-            custom:
-              name: test
-              tag:  test
-              options: test
+              custom:
+                name: drydock/c7
+                tag: $IMAGE_TAG
         requires:
           integrations:
             - docker_chaitanya
@@ -80,17 +92,21 @@ pipelines:
         configuration:
           affinityGroup: test_group
         setup:
+          environmentVariables:
+            normal:
+              foo: bar
+              boo: $foo
+              shoo: foo boo
+              moo: '"abc def"'
+              zoo: '"\$a$foo"'
+              koo: \(\)\$\\\!\@#%^*
+              IMAGE_TAG: v7.2.4
           runtime:
             type: image
             image:
-              auto:
-                language: java
-                versions:
-                  - 1
-            custom:
-              name: test
-              tag:  test
-              options: test
+              custom:
+                name: drydock/c7
+                tag: $IMAGE_TAG
         requires:
           integrations:
             - docker_chaitanya
@@ -105,17 +121,21 @@ pipelines:
         configuration:
           affinityGroup: group2
         setup:
+          environmentVariables:
+            normal:
+              foo: bar
+              boo: $foo
+              shoo: foo boo
+              moo: '"abc def"'
+              zoo: '"\$a$foo"'
+              koo: \(\)\$\\\!\@#%^*
+              IMAGE_TAG: v7.2.4
           runtime:
             type: image
             image:
-              auto:
-                language: java
-                versions:
-                  - 1
-            custom:
-              name: test
-              tag:  test
-              options: test
+              custom:
+                name: drydock/c7
+                tag: $IMAGE_TAG
         requires:
           integrations:
             - docker_chaitanya
@@ -134,17 +154,21 @@ pipelines:
         configuration:
           affinityGroup: test_group
         setup:
+          environmentVariables:
+            normal:
+              foo: bar
+              boo: $foo
+              shoo: foo boo
+              moo: '"abc def"'
+              zoo: '"\$a$foo"'
+              koo: \(\)\$\\\!\@#%^*
+              IMAGE_TAG: v7.2.4
           runtime:
             type: image
             image:
-              auto:
-                language: java
-                versions:
-                  - 1
-            custom:
-              name: test
-              tag:  test
-              options: test
+              custom:
+                name: drydock/c7
+                tag: $IMAGE_TAG
         requires:
           integrations:
             - docker_chaitanya
@@ -179,17 +203,21 @@ pipelines:
       - name: step2_3
         type: bash
         setup:
+          environmentVariables:
+            normal:
+              foo: bar
+              boo: $foo
+              shoo: foo boo
+              moo: '"abc def"'
+              zoo: '"\$a$foo"'
+              koo: \(\)\$\\\!\@#%^*
+              IMAGE_TAG: v7.2.4
           runtime:
             type: image
             image:
-              auto:
-                language: java
-                versions:
-                  - 1
-            custom:
-              name: test
-              tag:  test
-              options: test
+              custom:
+                name: drydock/c7
+                tag: $IMAGE_TAG
         requires:
           integrations:
             - docker_chaitanya
