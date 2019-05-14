@@ -125,3 +125,104 @@ pipelines:
         triggeredBy:
           steps:
             - step2
+  - name: affinity_pipeline2
+    setup:
+      runtime: onHost
+    steps:
+      - name: step2_1
+        type: bash
+        configuration:
+          affinityGroup: test_group
+        setup:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - 1
+            custom:
+              name: test
+              tag:  test
+              options: test
+        requires:
+          integrations:
+            - docker_chaitanya
+        execution:
+          onExecute:
+            - echo "executing..."
+      - name: step2_2
+        type: bash
+        configuration:
+          affinityGroup: test_group
+        setup:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - 1
+            custom:
+              name: test
+              tag:  test
+              options: test
+        requires:
+          integrations:
+            - docker_chaitanya
+        execution:
+          onExecute:
+            - echo "executing..."
+        triggeredBy:
+          steps:
+            - step2
+      - name: step2_3
+        type: bash
+        configuration:
+          affinityGroup: test_group
+        setup:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - 1
+            custom:
+              name: test
+              tag:  test
+              options: test
+        requires:
+          integrations:
+            - docker_chaitanya
+        execution:
+          onExecute:
+            - echo "executing..."
+        triggeredBy:
+          steps:
+            - step2_2
+      - name: step2_4
+        type: bash
+        configuration:
+          affinityGroup: test_group
+        setup:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - 1
+            custom:
+              name: test
+              tag:  test
+              options: test
+        requires:
+          integrations:
+            - docker_chaitanya
+        execution:
+          onExecute:
+            - echo "executing..."
+        triggeredBy:
+          steps:
+            - step2_2
