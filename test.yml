@@ -6,7 +6,7 @@ pipelines:
       - name: step1
         type: bash
         configuration:
-          affinityGroup: test_group
+          affinityGroup: test_group123
         setup:
           environmentVariables:
             normal:
