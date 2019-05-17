@@ -7,6 +7,7 @@ pipelines:
         type: bash
         configuration:
           affinityGroup: test_group123
+          priority: 1
         setup:
           environmentVariables:
             normal:
@@ -33,6 +34,7 @@ pipelines:
         type: bash
         configuration:
           affinityGroup: test_group
+          priority: 4
         setup:
           environmentVariables:
             normal:
